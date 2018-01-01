@@ -7,4 +7,4 @@
  * 2. client/templates/react/index.js (react)
  */
 
-console.warn('Replace current index.js with either [index-vanilla.js] or [index-react.jsx]');
+console.warn('Replace current index.js with either [index-vanilla.js] or [index-react.js]');
