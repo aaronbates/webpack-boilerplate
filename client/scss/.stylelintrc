@@ -1,0 +1,7 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "rules": {
+    "color-named": null,
+    "number-leading-zero": null
+  }
+}

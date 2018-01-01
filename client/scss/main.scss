@@ -1,0 +1,43 @@
+@charset 'utf-8';
+
+// Import all SCSS files in a directory using '[dirname]/all-[dirname]' and
+// then create an `_all-[dirname].scss` in that directory which imports all
+// required files, or for granular control individually list all imports from
+// a particular directory below.
+//
+// Example — import all vendor files:
+// @import 'vendor/all-vendor';
+//
+// Example — import individual vendor files:
+// @import 'vendor/[file1]';
+// @import 'vendor/[file2]';
+
+// settings
+@import 'settings/all-settings';
+
+// tools
+@import 'tools/all-tools';
+
+// generic
+@import 'generic/all-generic';
+
+// vendor
+// @import 'vendor/all-vendor';
+
+// base
+@import 'base/all-base';
+
+// objects
+@import 'objects/all-objects';
+
+// layout
+@import 'layout/all-layout';
+
+// components
+@import 'components/all-components';
+
+// themes
+// @import 'themes/[theme]';
+
+// utils
+@import 'utils/all-utils';

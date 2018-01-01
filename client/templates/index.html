@@ -1,0 +1,115 @@
+<!doctype html>
+<html class="no-js" dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Hello world!</title>
+
+    <meta name="description" content="">
+
+    <link rel="canonical" href="/">
+
+    <!-- icons -->
+    <link rel="icon" href="/icon-32.png" sizes="32x32">
+    <link rel="icon" href="/icon-57.png" sizes="57x57">
+    <link rel="icon" href="/icon-76.png" sizes="76x76">
+    <link rel="icon" href="/icon-96.png" sizes="96x96">
+    <link rel="icon" href="/icon-128.png" sizes="128x128">
+    <link rel="icon" href="/icon-228.png" sizes="228x228">
+
+    <!-- icons: android -->
+    <link rel="shortcut icon" href="/icon-192.png" sizes="192x192">
+
+    <!-- icons: ios -->
+    <link rel="apple-touch-icon" href="/icon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/icon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/icon-167.png" sizes="167x167">
+    <link rel="apple-touch-icon" href="/icon-180.png" sizes="180x180">
+
+    <!-- icons: win8+ie10 -->
+    <meta name="msapplication-TileColor" content="[#HEXCODE bg colour]">
+    <meta name="msapplication-TileImage" content="/icon-144.png">
+
+    <!-- icons: win8.1+ie11 and above -->
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+
+    <!-- web manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <% for (var css in htmlWebpackPlugin.files.css) { %>
+    <link rel="preload" as="style" href="<%= htmlWebpackPlugin.files.css[css] %>">
+    <link rel="prefetch" as="style" href="<%= htmlWebpackPlugin.files.css[css] %>">
+    <% } %>
+    <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+    <link rel="preload" as="script" href="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>">
+    <link rel="prefetch" as="script" href="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>">
+    <% } %>
+
+    <% for (var css in htmlWebpackPlugin.files.css) { %>
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css[css] %>">
+    <% } %>
+
+    <script>
+      /* eslint indent: 0, no-var: 0, vars-on-top: 0, no-trailing-space: 0 */
+      // test if polyfills needed, flag below enables
+      var runPolyfills = false;
+
+      if (runPolyfills) {
+        var newBrowser = (
+          'fetch' in window &&
+          'Promise' in window &&
+          'assign' in Object &&
+          'keys' in Object
+        );
+
+        if (!newBrowser) {
+          // if needed load babel-polyfills and whatwg-fetch
+          var scriptEl = document.createElement('script');
+          scriptEl.src = '/js/vendor/polyfills.dc641dba.js';
+          scriptEl.async = false;
+          document.head.appendChild(scriptEl);
+        }
+      }
+
+      // IE11 support for <main>
+      document.createElement('main');
+
+      // Picture element HTML5 shiv
+      document.createElement('picture');
+
+      // LazySizes config
+      window.lazySizesConfig = window.lazySizesConfig || {};
+      window.lazySizesConfig.lazyClass = 'o-lazyload';
+      window.lazySizesConfig.loadingClass = 'is-lazyloading';
+      window.lazySizesConfig.loadedClass = 'has-lazyloaded';
+    </script>
+
+    <script src="/js/vendor/picturefill-3.0.2.min.js" async></script>
+    <script src="/js/vendor/lazysizes-4.0.0.min.js" async></script>
+  </head>
+  <body>
+    <!--[if lte IE 9]>
+      <p class="c-browser-upgrade">You are using an outdated browser. Please <a href="https://browsehappy.com" >upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <h1>Hello world! (HTML+JS)</h1>
+
+    <!-- Polyfills? -->
+    <script src="/js/vendor/modernizr-3.5.0.min.js"></script>
+
+    <!-- Optional JavaScript -->
+
+    <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+    <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } %>
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <!-- <script>
+      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+      ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>-->
+  </body>
+</html>

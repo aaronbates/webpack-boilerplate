@@ -1,0 +1,16 @@
+# humanstxt.org
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Firstname Lastname - Role
+    email-address @twitter-handle
+    github-page
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, SASS, ES6, REACT, NODE, EXPRESS
+
+    Node, NPM and Webpack - start, test, debug, build
+    +see repo: https://github.com/aaronbates/webpack-boilerplate
+    +plugins: Babel, PostCSS, PurifyCSS, UglifyJS and more

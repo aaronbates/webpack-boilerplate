@@ -1,0 +1,45 @@
+// component example
+
+// Organise components in the following order:
+// - variables
+// - functions
+// - mixins
+// - structure
+// - relationships
+// - themes
+// - exported selectors
+
+// variables
+// $var1: value;
+// $var2: $color-primary;
+// $var3: $color-hover;
+
+// functions
+// any functions required?
+
+// mixins
+// @mixin mixin($arg1, $arg2: $var2, $arg3: $var3) {
+//   background-color: $argument1;
+//   color: $argument2;
+//
+//   &:hover {
+//     color: $arg3;
+//   }
+// }
+
+// structure — use placeholder then export ONCE to selector.
+// %component {
+//   property: value;
+//   ...
+// }
+
+// relationships
+// any relationships with other components?
+
+// themes
+// any theme specific styling required?
+
+// exported selectors
+// .component {
+//   @extend %component;
+// }
