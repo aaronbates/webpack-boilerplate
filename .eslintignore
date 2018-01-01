@@ -1,0 +1,3 @@
+# ignore vendor files (likely minified etc.)
+client/js/vendor
+client/scss/vendor

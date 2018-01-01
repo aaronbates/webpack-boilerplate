@@ -1,0 +1,17 @@
+{
+  "presets": [
+    [ "env", {
+      "targets": {
+        "node": "current",
+        "uglify": true
+      },
+      "modules": false
+      }
+    ],
+    "react"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "react-css-modules"
+  ]
+}
