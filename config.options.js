@@ -7,7 +7,7 @@ const OPTIONS = {
   OPTIMISE_IMAGES: false,
   OPTIMISE_SVG: false,
   PURIFYCSS: false,
-  REACT: true,
+  REACT: false,
   SERVER: false,
   SERVICE_WORKERS: false,
 };
