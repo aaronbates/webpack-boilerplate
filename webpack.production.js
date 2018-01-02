@@ -97,8 +97,7 @@ if (OPTIONS.PURIFYCSS) {
 // inline critical css in html if enabled
 if (OPTIONS.CRITICAL_CSS) {
   // break require rule here as plugin causes errors with webpack dev server
-  const CriticalCSSPlugin = require('webpack-plugin-critical'); // eslint-disable-line global-require
-  const { CriticalPlugin } = CriticalCSSPlugin;
+  const { CriticalPlugin } = require('webpack-plugin-critical'); // eslint-disable-line global-require
 
   config = merge.smart(config, {
     plugins: [

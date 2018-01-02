@@ -14,7 +14,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const HTMLWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const WebpackBundleAnalyzerPlugin = require('webpack-bundle-analyzer');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 // configs
 const developmentConfig = require('./webpack.development.js');
@@ -210,11 +210,9 @@ if (OPTIONS.USE_JQUERY) {
 
 // analyze client bundles if DEBUG true in node env
 if (ENV.DEBUG) {
-  const WebpackAnalyzerPlugin = WebpackBundleAnalyzerPlugin.BundleAnalyzerPlugin;
-
   clientConfig = merge.smart(clientConfig, {
     plugins: [
-      new WebpackAnalyzerPlugin({
+      new BundleAnalyzerPlugin({
         // analyzerMode: 'static'
         analyzerMode: 'server',
         analyzerPort: 8888,
