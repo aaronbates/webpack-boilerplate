@@ -14,9 +14,6 @@ const OPTIONS = require('./config.options.js');
 const NodeExternals = require('webpack-node-externals');
 const StartServerPlugin = require('start-server-webpack-plugin');
 
-// console.log(PATHS.PATH_SERVER_SOURCE);
-// console.log(PATHS.PATH_SERVER_DIST);
-
 // export server specific config
 const config = {
   name: 'server',
